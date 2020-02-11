@@ -113,6 +113,10 @@ body{
 /*=================================*/
 .main, .wrapper{
     display: flex;
+    min-height: 100%;/*footer float fix for Safari and other browsers*/
+}
+.main{
+    overflow-y: scroll; /*footer float fix for Safari and other browsers*/
 }
 main{
     width: 77%;
