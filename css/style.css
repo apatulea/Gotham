@@ -1,0 +1,379 @@
+/*=================================*/
+/* CSS reset shuould be done ======*/
+/*=================================*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*connect the fonts from the font folder*/
+/*optional - convert the .ttf , otffont format to .woff format - google.com*/
+@font-face{
+    font-family: Roboto;
+    src: url("../fonts/Roboto-Regular.ttf");
+}
+@font-face{
+    font-family: Roboto;
+    src: url("../fonts/Roboto-Light.ttf");
+    font-weight: 300;
+}
+@font-face{
+    font-family: Proxima;
+    src: url("../fonts/ProximaNova-Light.otf");
+}
+@font-face{ /*connect the proxima nova bold font as well*/
+    font-family: Proxima;
+    src:url("../fonts/ProximaNova-Bold.otf");
+    font-weight: bold;
+}
+body{
+    font-size: 16px;
+    font-family: Roboto;
+}
+
+/*=================================*/
+/* Header =========================*/
+/*=================================*/
+.page-header, .page-footer{
+    height:69px;
+    width: 100%;
+    background-color: #f7c61d;
+}
+.wrapper{
+    width: 1170px;
+    height: 100%;
+    margin: 0 auto; /*center the wrapper in the mid of the page*/
+}
+.page-header .wrapper, .page-footer .wrapper {
+    display: flex;
+    justify-content: space-around; /*equal spaces between elements*/
+    align-items: center;
+}
+.page-header nav ul, .page-footer .footer-nav ul{
+    display: flex;
+}
+.page-header ul a{
+    font-family: Proxima;
+    color: #000000;
+    text-transform: uppercase;
+    text-decoration: none;
+    justify-content: space-between; /*same space between elememts*/
+    padding: 0 35px; /*otherwise there will be no spaces between elelements*/
+}
+.page-header ul a:hover{
+    color: #ffffff;
+}
+
+/*=================================*/
+/* Main ===========================*/
+/*=================================*/
+.main, .wrapper{
+    display: flex;
+}
+main{
+    width: 77%;
+    padding-right: 40px;
+}
+main h2{
+    font-family: Proxima;
+    font-weight: bold;
+    font-size: 24px;
+    color: #333333;
+    margin: 40px 0 15px;
+}
+article h3{
+    font-family: Proxima;
+    font-weight: 300;
+    font-size: 30px;
+    color: #4e4e4e;
+}
+.right-sidebar{
+    width: 23%;
+}
+article{
+    display: flex;
+    margin-bottom: 50px;
+}
+article img{
+    width: 100%;
+}
+.article-left{
+    width: 30%;
+}
+.article-left img{
+    border-radius: 3px;
+}
+.article-right{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 25px;
+    justify-content: space-between;
+}
+.article-right .meta{
+    margin: 10px 0;
+}
+.meta{
+    font-family: Roboto;
+    font-weight: 300;
+    color: #555555;
+}
+.meta span::after{
+    display: inline-block;
+    content: "|";
+    color: #555555;
+    margin-left: 10px;
+}
+.meta span:last-child::after{
+    display: none;
+}
+.meta .category{
+    color: #e3b002;
+}
+.decription{
+    color:#555555;
+    font-size: 16px;
+    font-family: Roboto;
+
+}
+.decription::after{
+    content: ">";
+    color: #e3b002;
+}
+.additional{
+    color:#999999;
+    font-family: Robot;
+    font-weight: 300;
+}
+.additional span, .additional i{
+    margin-right: 10px;
+}
+.views::after{
+    content:"|";
+    margin-left: 10px;
+}
+.comments :last-child{
+    color: #e3b002
+}
+.more{
+    width: 170px;
+    height: 42px;
+    background: #f9cd33;
+    color: #100e03;
+    font-family: Roboto;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+    display: block; /* otherwise the margin auto will not work */
+    margin: 0 auto;
+    cursor: pointer;
+}
+.more:hover{
+    background: #e3b002;
+}
+/*=================================*/
+/* Aside ==========================*/
+/*=================================*/
+aside.right-sidebar{
+    padding-top: 78px;
+    padding-left: 25px;
+    border-left: 1px solid #dcdcdc;
+}
+.search-box{
+    width: 100%;
+    position: relative /*otherwise the search button will be above the search bar*/
+}
+.search-box input{
+    width: 100%;
+    border-radius: 30px;
+    padding: 8px 10px 8px 30px;
+    outline: none;
+    border: 1px solid #9a9a9a;
+    font-family: Roboto;
+    font-size: 14px;
+}
+.search-box label{
+    position: absolute; /*put the search icon in the input*/
+    left: 10px;
+    top: 8px;
+    z-index: 100; /*to come omn top otherwise will be below*/
+}
+.calendar-widget .calendar-top{
+    display: flex;
+    justify-content: space-around; /*adds also spaces at the beginning and at the end of line*/
+    align-items: center;
+    height: 38px;
+    width: 100%;
+}
+.calendar-widget{
+    /*
+    border: 1px solid #9a9a9a;
+    border-radius: 10px;
+    */
+    margin-top: 38px;
+}
+.calendar-prev, .calendar-next{
+    color: #9a9a9a;
+}
+.calendar-widget table{
+    width: 100%;
+}
+.calendar-widget table th{
+    height: 26px;
+    background: #e7e7e7;
+    color: #aeaeae;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid white;
+}
+.calendar-widget table th:first-child{
+    border-left: 1px solid #e7e7e7;
+}
+.calendar-widget table th:last-child{
+    border-right: 1px solid #e7e7e7;
+}
+.calendar-widget table td{
+    height: 33px;
+    color: #4d4d4d;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #eeeeee;
+    color: #d6d6d6;
+}
+.calendar-widget .current-month{
+    color: #595959;
+}
+.calendar-widget .current-month:hover{
+    background-color: #f6c51b;
+    color: #ffffff;
+    cursor: default;
+}
+.calendar-widget table td:first-child{
+    border-left: none;
+}
+.calendar-widget table td:last-child{
+    border-right: none;
+}
+.calendar-widget table tr:last-child td{
+    border-bottom:none;
+}
+.popular-news{
+    margin-top: 45px;
+}
+.popular-news article{
+    flex-direction: column;
+}
+.popular-news h2{
+    font-family: Proxima;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    white-space: nowrap; /*otherwise the line (below) will break the text in two parts*/
+    align-items: center;
+    margin-bottom: 30px;
+}
+.popular-news h2::after{
+    content: ".";
+    font-size: 0; /*the dot itself will not be displayed ,just the border*/
+    display: block;
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid #e5e5e5;
+    margin-left: 20px;
+}
+.popular-news h3{
+    margin-top: 10px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    line-height: 1.2;
+}
+
+/*=================================*/
+/* Footer =========================*/
+/*=================================*/
+.page-footer{
+    margin: 100px 0 0;
+}
+.copy{
+    font-family: Proxima;
+    font-weight: 300;
+    font-size: 13px;
+    color: #a78613;
+}
+.footer-nav a{
+    font-family: Proxima;
+    color: #000000;
+    text-decoration: none;
+    justify-content: space-between; /*same space between elememts*/
+    padding: 0 35px; /*otherwise there will be no spaces between elelements*/
+}
+.socials{
+    display: flex;
+}
+.socials a{
+    display: block;
+    width: 45px;
+    height: 45px;
+    background: #fff;
+    border-radius: 50%;
+    color: #f8cc33;
+    font-size: 21px;
+    /*cemter the icons*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*--------------*/
+    text-decoration:none;
+    margin-left: 10px;
+}
+.page-footer .footer-nav ul a:hover{
+    color: #ffffff;
+}
