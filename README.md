@@ -3,4 +3,4 @@
 
 Github Pages link: https://apatulea.github.io/Gotham/
 
-#####UDEMY Project : The Rsults-Oriented Web Developer Course - Bootcamp 2020
+###### *Project : The Rsults-Oriented Web Developer Course - Bootcamp 2020*
